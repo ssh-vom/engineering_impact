@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+from datetime import UTC, datetime, timedelta
 from pathlib import Path
 
 from app.config import BACKEND_ROOT, load_settings
@@ -20,12 +21,18 @@ def main() -> None:
     )
 
     pull_requests: list[dict[str, object]] = []
+    cutoff = datetime.now(UTC) - timedelta(days=90)
 
     with GitHubClient(token=settings.github_token) as client:
         for pull_request in client.iter_pull_requests(
             settings.github_owner, settings.github_repo
         ):
-            if not pull_request["merged_at"]:
+            merged_at = pull_request["merged_at"]
+            if not merged_at:
+                continue
+
+            merged_at_dt = datetime.fromisoformat(merged_at.replace("Z", "+00:00"))
+            if merged_at_dt < cutoff:
                 continue
 
             number = pull_request["number"]
@@ -44,9 +51,9 @@ def main() -> None:
                     "author_login": pull_request["user"]["login"],
                     "author_avatar": pull_request["user"]["avatar_url"],
                     "created_at": pull_request["created_at"],
-                    "merged_at": pull_request["merged_at"],
+                    "merged_at": merged_at,
                     "merged": True,
-                    "changed_files_count": pull_request["changed_files"],
+                    "changed_files_count": len(files),
                     "top_level_areas": sorted(
                         {
                             Path(file["filename"]).parts[0]
