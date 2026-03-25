@@ -1,0 +1,875 @@
+{
+  "summary": {
+    "repo": "PostHog/posthog",
+    "windowDays": 90,
+    "generatedAt": "2026-03-25T18:22:19.555049+00:00",
+    "closedPrs": 50,
+    "mergedPrs": 47,
+    "graphqlPagesFetched": 2,
+    "restFileRequests": 7,
+    "phase": "complete",
+    "topCandidateLogins": [
+      "Gilbert09",
+      "cat-ph",
+      "dmarticus",
+      "nickbest-ph",
+      "MattPua"
+    ],
+    "areaEnrichmentComplete": true
+  },
+  "pullRequests": [
+    {
+      "number": 52258,
+      "title": "fix(flags): add missing compiled_regex field in PropertyFilter test initializers",
+      "url": "https://github.com/PostHog/posthog/pull/52258",
+      "author_login": "mendral-app",
+      "author_avatar": "https://avatars.githubusercontent.com/in/1975249?v=4",
+      "created_at": "2026-03-25T13:57:04Z",
+      "merged_at": "2026-03-25T18:13:58Z",
+      "merged": true,
+      "changed_files_count": 1,
+      "top_level_areas": [],
+      "reviews": [
+        {
+          "reviewer_login": "gantoine",
+          "review_state": "APPROVED",
+          "submitted_at": "2026-03-25T14:24:58Z"
+        }
+      ]
+    },
+    {
+      "number": 52298,
+      "title": "fix(flags): add missing field in test",
+      "url": "https://github.com/PostHog/posthog/pull/52298",
+      "author_login": "matheus-vb",
+      "author_avatar": "https://avatars.githubusercontent.com/u/88170905?u=5cca227083668e8129a37eec20574b37c51aae40&v=4",
+      "created_at": "2026-03-25T17:36:20Z",
+      "merged_at": "2026-03-25T17:47:39Z",
+      "merged": true,
+      "changed_files_count": 1,
+      "top_level_areas": [],
+      "reviews": [
+        {
+          "reviewer_login": "dmarticus",
+          "review_state": "APPROVED",
+          "submitted_at": "2026-03-25T17:46:35Z"
+        }
+      ]
+    },
+    {
+      "number": 52239,
+      "title": "feat(cymbal): add php frame support",
+      "url": "https://github.com/PostHog/posthog/pull/52239",
+      "author_login": "cat-ph",
+      "author_avatar": "https://avatars.githubusercontent.com/u/268578347?v=4",
+      "created_at": "2026-03-25T12:01:05Z",
+      "merged_at": "2026-03-25T17:42:20Z",
+      "merged": true,
+      "changed_files_count": 5,
+      "top_level_areas": [
+        "rust"
+      ],
+      "reviews": [
+        {
+          "reviewer_login": "greptile-apps",
+          "review_state": "COMMENTED",
+          "submitted_at": "2026-03-25T12:05:37Z"
+        },
+        {
+          "reviewer_login": "cat-ph",
+          "review_state": "COMMENTED",
+          "submitted_at": "2026-03-25T12:12:47Z"
+        },
+        {
+          "reviewer_login": "hpouillot",
+          "review_state": "COMMENTED",
+          "submitted_at": "2026-03-25T12:59:01Z"
+        },
+        {
+          "reviewer_login": "hpouillot",
+          "review_state": "APPROVED",
+          "submitted_at": "2026-03-25T13:04:06Z"
+        }
+      ]
+    },
+    {
+      "number": 52278,
+      "title": "chore(notifications): remove debug notifications page and send_test endpoint",
+      "url": "https://github.com/PostHog/posthog/pull/52278",
+      "author_login": "yasen-posthog",
+      "author_avatar": "https://avatars.githubusercontent.com/u/213223200?u=4009cdc9634d9b8717efe75d923bd15b604175b1&v=4",
+      "created_at": "2026-03-25T15:43:29Z",
+      "merged_at": "2026-03-25T17:42:10Z",
+      "merged": true,
+      "changed_files_count": 12,
+      "top_level_areas": [],
+      "reviews": [
+        {
+          "reviewer_login": "ReeceJones",
+          "review_state": "APPROVED",
+          "submitted_at": "2026-03-25T15:46:10Z"
+        }
+      ]
+    },
+    {
+      "number": 52025,
+      "title": "fix(cohorts):  self-heal stuck static cohorts and fix OOM in CH\u2192PG sync",
+      "url": "https://github.com/PostHog/posthog/pull/52025",
+      "author_login": "dmarticus",
+      "author_avatar": "https://avatars.githubusercontent.com/u/4853149?u=7e84d1ca5c76d7f72f52c8d51e24cb493f5dd528&v=4",
+      "created_at": "2026-03-23T23:44:05Z",
+      "merged_at": "2026-03-25T17:41:16Z",
+      "merged": true,
+      "changed_files_count": 6,
+      "top_level_areas": [
+        "posthog"
+      ],
+      "reviews": [
+        {
+          "reviewer_login": "graphite-app",
+          "review_state": "COMMENTED",
+          "submitted_at": "2026-03-23T23:48:19Z"
+        },
+        {
+          "reviewer_login": "greptile-apps",
+          "review_state": "COMMENTED",
+          "submitted_at": "2026-03-23T23:49:25Z"
+        },
+        {
+          "reviewer_login": "gustavohstrassburger",
+          "review_state": "APPROVED",
+          "submitted_at": "2026-03-24T14:40:19Z"
+        },
+        {
+          "reviewer_login": "dmarticus",
+          "review_state": "COMMENTED",
+          "submitted_at": "2026-03-24T17:57:04Z"
+        },
+        {
+          "reviewer_login": "dmarticus",
+          "review_state": "COMMENTED",
+          "submitted_at": "2026-03-24T17:57:05Z"
+        }
+      ]
+    },
+    {
+      "number": 51549,
+      "title": "feat(django): personhog client migration for person reads",
+      "url": "https://github.com/PostHog/posthog/pull/51549",
+      "author_login": "nickbest-ph",
+      "author_avatar": "https://avatars.githubusercontent.com/u/206742387?u=0fee4599f3dce4aa25abb445922f613e303475a5&v=4",
+      "created_at": "2026-03-18T23:00:49Z",
+      "merged_at": "2026-03-25T17:39:57Z",
+      "merged": true,
+      "changed_files_count": 31,
+      "top_level_areas": [
+        "posthog",
+        "products"
+      ],
+      "reviews": [
+        {
+          "reviewer_login": "greptile-apps",
+          "review_state": "COMMENTED",
+          "submitted_at": "2026-03-18T23:10:57Z"
+        },
+        {
+          "reviewer_login": "greptile-apps",
+          "review_state": "COMMENTED",
+          "submitted_at": "2026-03-21T00:08:27Z"
+        },
+        {
+          "reviewer_login": "eli-r-ph",
+          "review_state": "APPROVED",
+          "submitted_at": "2026-03-21T00:25:24Z"
+        },
+        {
+          "reviewer_login": "jose-sequeira",
+          "review_state": "COMMENTED",
+          "submitted_at": "2026-03-23T09:00:44Z"
+        },
+        {
+          "reviewer_login": "jose-sequeira",
+          "review_state": "COMMENTED",
+          "submitted_at": "2026-03-23T09:02:09Z"
+        },
+        {
+          "reviewer_login": "jose-sequeira",
+          "review_state": "COMMENTED",
+          "submitted_at": "2026-03-23T09:05:44Z"
+        },
+        {
+          "reviewer_login": "jose-sequeira",
+          "review_state": "COMMENTED",
+          "submitted_at": "2026-03-23T09:07:15Z"
+        },
+        {
+          "reviewer_login": "jose-sequeira",
+          "review_state": "COMMENTED",
+          "submitted_at": "2026-03-23T09:09:27Z"
+        },
+        {
+          "reviewer_login": "jose-sequeira",
+          "review_state": "COMMENTED",
+          "submitted_at": "2026-03-23T09:10:09Z"
+        },
+        {
+          "reviewer_login": "jose-sequeira",
+          "review_state": "COMMENTED",
+          "submitted_at": "2026-03-23T09:10:26Z"
+        },
+        {
+          "reviewer_login": "nickbest-ph",
+          "review_state": "COMMENTED",
+          "submitted_at": "2026-03-23T15:37:19Z"
+        },
+        {
+          "reviewer_login": "nickbest-ph",
+          "review_state": "COMMENTED",
+          "submitted_at": "2026-03-23T15:37:23Z"
+        },
+        {
+          "reviewer_login": "nickbest-ph",
+          "review_state": "COMMENTED",
+          "submitted_at": "2026-03-23T15:44:27Z"
+        },
+        {
+          "reviewer_login": "haacked",
+          "review_state": "COMMENTED",
+          "submitted_at": "2026-03-23T15:56:32Z"
+        },
+        {
+          "reviewer_login": "graphite-app",
+          "review_state": "COMMENTED",
+          "submitted_at": "2026-03-24T00:52:48Z"
+        },
+        {
+          "reviewer_login": "graphite-app",
+          "review_state": "COMMENTED",
+          "submitted_at": "2026-03-24T04:19:44Z"
+        },
+        {
+          "reviewer_login": "graphite-app",
+          "review_state": "COMMENTED",
+          "submitted_at": "2026-03-24T15:29:18Z"
+        },
+        {
+          "reviewer_login": "nickbest-ph",
+          "review_state": "COMMENTED",
+          "submitted_at": "2026-03-24T23:36:32Z"
+        },
+        {
+          "reviewer_login": "jose-sequeira",
+          "review_state": "APPROVED",
+          "submitted_at": "2026-03-25T14:16:30Z"
+        }
+      ]
+    },
+    {
+      "number": 52286,
+      "title": "fix: query trace_log across all cluster nodes for profiling results",
+      "url": "https://github.com/PostHog/posthog/pull/52286",
+      "author_login": "andyzzhao",
+      "author_avatar": "https://avatars.githubusercontent.com/u/34008309?u=8eb88ef53516ca25323feda4edddcda04d01db26&v=4",
+      "created_at": "2026-03-25T16:42:01Z",
+      "merged_at": "2026-03-25T17:26:28Z",
+      "merged": true,
+      "changed_files_count": 1,
+      "top_level_areas": [],
+      "reviews": [
+        {
+          "reviewer_login": "github-actions",
+          "review_state": "APPROVED",
+          "submitted_at": "2026-03-25T16:44:36Z"
+        },
+        {
+          "reviewer_login": "greptile-apps",
+          "review_state": "COMMENTED",
+          "submitted_at": "2026-03-25T16:45:33Z"
+        }
+      ]
+    },
+    {
+      "number": 52175,
+      "title": "fix: skip coupons_overview API call for non-admin users",
+      "url": "https://github.com/PostHog/posthog/pull/52175",
+      "author_login": "MattBro",
+      "author_avatar": "https://avatars.githubusercontent.com/u/9833550?u=853c1ee291f05c8d92a0075eb44f751285ef5f1e&v=4",
+      "created_at": "2026-03-24T19:37:40Z",
+      "merged_at": "2026-03-25T17:16:44Z",
+      "merged": true,
+      "changed_files_count": 1,
+      "top_level_areas": [],
+      "reviews": [
+        {
+          "reviewer_login": "greptile-apps",
+          "review_state": "COMMENTED",
+          "submitted_at": "2026-03-24T19:39:56Z"
+        },
+        {
+          "reviewer_login": "MattBro",
+          "review_state": "COMMENTED",
+          "submitted_at": "2026-03-24T20:37:56Z"
+        },
+        {
+          "reviewer_login": "rafaeelaudibert",
+          "review_state": "APPROVED",
+          "submitted_at": "2026-03-25T03:02:49Z"
+        }
+      ]
+    },
+    {
+      "number": 52280,
+      "title": "fix: unbreak onboaridng",
+      "url": "https://github.com/PostHog/posthog/pull/52280",
+      "author_login": "gewenyu99",
+      "author_avatar": "https://avatars.githubusercontent.com/u/29069505?u=b792f6064657dd8f29a6ea2c12af5da40ae96856&v=4",
+      "created_at": "2026-03-25T15:57:55Z",
+      "merged_at": "2026-03-25T17:04:09Z",
+      "merged": true,
+      "changed_files_count": 11,
+      "top_level_areas": [],
+      "reviews": [
+        {
+          "reviewer_login": "greptile-apps",
+          "review_state": "COMMENTED",
+          "submitted_at": "2026-03-25T16:00:32Z"
+        },
+        {
+          "reviewer_login": "rafaeelaudibert",
+          "review_state": "APPROVED",
+          "submitted_at": "2026-03-25T16:03:47Z"
+        }
+      ]
+    },
+    {
+      "number": 52063,
+      "title": "fix: Wire up leadership into personhog-router",
+      "url": "https://github.com/PostHog/posthog/pull/52063",
+      "author_login": "jose-sequeira",
+      "author_avatar": "https://avatars.githubusercontent.com/u/117165826?u=390bdb2b233b0ee3dacf439bc42192d135acd124&v=4",
+      "created_at": "2026-03-24T11:26:44Z",
+      "merged_at": "2026-03-25T16:34:11Z",
+      "merged": true,
+      "changed_files_count": 3,
+      "top_level_areas": [],
+      "reviews": [
+        {
+          "reviewer_login": "nickbest-ph",
+          "review_state": "APPROVED",
+          "submitted_at": "2026-03-25T16:33:33Z"
+        }
+      ]
+    },
+    {
+      "number": 52168,
+      "title": "feat(data-warehouse): Allow deletion of webhooks",
+      "url": "https://github.com/PostHog/posthog/pull/52168",
+      "author_login": "Gilbert09",
+      "author_avatar": "https://avatars.githubusercontent.com/u/1459269?u=0edde3eeb61b9d9c80cf8e432bae838fee58f179&v=4",
+      "created_at": "2026-03-24T18:48:11Z",
+      "merged_at": "2026-03-25T16:33:44Z",
+      "merged": true,
+      "changed_files_count": 11,
+      "top_level_areas": [
+        "frontend",
+        "posthog",
+        "products"
+      ],
+      "reviews": [
+        {
+          "reviewer_login": "greptile-apps",
+          "review_state": "COMMENTED",
+          "submitted_at": "2026-03-24T18:54:54Z"
+        },
+        {
+          "reviewer_login": "copilot-pull-request-reviewer",
+          "review_state": "COMMENTED",
+          "submitted_at": "2026-03-25T10:34:29Z"
+        },
+        {
+          "reviewer_login": "MarconLP",
+          "review_state": "APPROVED",
+          "submitted_at": "2026-03-25T14:01:45Z"
+        },
+        {
+          "reviewer_login": "graphite-app",
+          "review_state": "COMMENTED",
+          "submitted_at": "2026-03-25T14:07:24Z"
+        },
+        {
+          "reviewer_login": "danielcarletti",
+          "review_state": "COMMENTED",
+          "submitted_at": "2026-03-25T14:14:54Z"
+        },
+        {
+          "reviewer_login": "Gilbert09",
+          "review_state": "COMMENTED",
+          "submitted_at": "2026-03-25T14:28:20Z"
+        },
+        {
+          "reviewer_login": "danielcarletti",
+          "review_state": "COMMENTED",
+          "submitted_at": "2026-03-25T15:55:24Z"
+        },
+        {
+          "reviewer_login": "danielcarletti",
+          "review_state": "APPROVED",
+          "submitted_at": "2026-03-25T15:55:49Z"
+        }
+      ]
+    },
+    {
+      "number": 51982,
+      "title": "feat(insight): Allow toggling other labels for trends insights with context menu",
+      "url": "https://github.com/PostHog/posthog/pull/51982",
+      "author_login": "MattPua",
+      "author_avatar": "https://avatars.githubusercontent.com/u/3376526?u=450323d42789dc0b81ed0ed29882af26d184bb86&v=4",
+      "created_at": "2026-03-23T17:44:03Z",
+      "merged_at": "2026-03-25T16:29:00Z",
+      "merged": true,
+      "changed_files_count": 5,
+      "top_level_areas": [
+        "frontend"
+      ],
+      "reviews": [
+        {
+          "reviewer_login": "greptile-apps",
+          "review_state": "COMMENTED",
+          "submitted_at": "2026-03-23T17:51:55Z"
+        },
+        {
+          "reviewer_login": "graphite-app",
+          "review_state": "COMMENTED",
+          "submitted_at": "2026-03-24T13:34:58Z"
+        },
+        {
+          "reviewer_login": "sampennington",
+          "review_state": "COMMENTED",
+          "submitted_at": "2026-03-25T10:58:20Z"
+        },
+        {
+          "reviewer_login": "MattPua",
+          "review_state": "COMMENTED",
+          "submitted_at": "2026-03-25T13:28:36Z"
+        },
+        {
+          "reviewer_login": "sampennington",
+          "review_state": "COMMENTED",
+          "submitted_at": "2026-03-25T13:35:36Z"
+        },
+        {
+          "reviewer_login": "sampennington",
+          "review_state": "APPROVED",
+          "submitted_at": "2026-03-25T16:10:06Z"
+        }
+      ]
+    },
+    {
+      "number": 51193,
+      "title": "fix(llma): avoid column name collisions with non-llm insights",
+      "url": "https://github.com/PostHog/posthog/pull/51193",
+      "author_login": "christiaan-ph",
+      "author_avatar": "https://avatars.githubusercontent.com/u/252863363?u=f21f9d49d39afc4c0f09182baf9c1289ad244309&v=4",
+      "created_at": "2026-03-16T18:14:15Z",
+      "merged_at": "2026-03-25T16:19:52Z",
+      "merged": true,
+      "changed_files_count": 3,
+      "top_level_areas": [],
+      "reviews": [
+        {
+          "reviewer_login": "andrewm4894",
+          "review_state": "APPROVED",
+          "submitted_at": "2026-03-16T18:16:14Z"
+        }
+      ]
+    },
+    {
+      "number": 52269,
+      "title": "fix(error-tracking): improve issue list presentation",
+      "url": "https://github.com/PostHog/posthog/pull/52269",
+      "author_login": "hpouillot",
+      "author_avatar": "https://avatars.githubusercontent.com/u/3455883?u=1740ca24290de1e0d5ea3ac9d0c0bf106a8efc78&v=4",
+      "created_at": "2026-03-25T14:34:27Z",
+      "merged_at": "2026-03-25T16:16:54Z",
+      "merged": true,
+      "changed_files_count": 2,
+      "top_level_areas": [],
+      "reviews": [
+        {
+          "reviewer_login": "greptile-apps",
+          "review_state": "COMMENTED",
+          "submitted_at": "2026-03-25T14:37:08Z"
+        },
+        {
+          "reviewer_login": "ablaszkiewicz",
+          "review_state": "APPROVED",
+          "submitted_at": "2026-03-25T14:48:20Z"
+        },
+        {
+          "reviewer_login": "graphite-app",
+          "review_state": "COMMENTED",
+          "submitted_at": "2026-03-25T14:50:16Z"
+        },
+        {
+          "reviewer_login": "cat-ph",
+          "review_state": "APPROVED",
+          "submitted_at": "2026-03-25T14:55:05Z"
+        }
+      ]
+    },
+    {
+      "number": 49313,
+      "title": "feat(notifications): notification popover UI with real-time SSE and toast alerts",
+      "url": "https://github.com/PostHog/posthog/pull/49313",
+      "author_login": "yasen-posthog",
+      "author_avatar": "https://avatars.githubusercontent.com/u/213223200?u=4009cdc9634d9b8717efe75d923bd15b604175b1&v=4",
+      "created_at": "2026-02-27T08:08:36Z",
+      "merged_at": "2026-03-25T15:31:56Z",
+      "merged": true,
+      "changed_files_count": 31,
+      "top_level_areas": [],
+      "reviews": [
+        {
+          "reviewer_login": "greptile-apps",
+          "review_state": "COMMENTED",
+          "submitted_at": "2026-02-27T08:12:44Z"
+        },
+        {
+          "reviewer_login": "graphite-app",
+          "review_state": "COMMENTED",
+          "submitted_at": "2026-02-27T08:43:02Z"
+        },
+        {
+          "reviewer_login": "graphite-app",
+          "review_state": "COMMENTED",
+          "submitted_at": "2026-03-17T13:16:11Z"
+        },
+        {
+          "reviewer_login": "graphite-app",
+          "review_state": "COMMENTED",
+          "submitted_at": "2026-03-18T13:36:59Z"
+        },
+        {
+          "reviewer_login": "graphite-app",
+          "review_state": "COMMENTED",
+          "submitted_at": "2026-03-18T17:05:08Z"
+        },
+        {
+          "reviewer_login": "graphite-app",
+          "review_state": "COMMENTED",
+          "submitted_at": "2026-03-19T11:11:43Z"
+        },
+        {
+          "reviewer_login": "graphite-app",
+          "review_state": "COMMENTED",
+          "submitted_at": "2026-03-23T13:51:25Z"
+        },
+        {
+          "reviewer_login": "graphite-app",
+          "review_state": "COMMENTED",
+          "submitted_at": "2026-03-24T10:02:51Z"
+        },
+        {
+          "reviewer_login": "graphite-app",
+          "review_state": "COMMENTED",
+          "submitted_at": "2026-03-24T12:32:03Z"
+        },
+        {
+          "reviewer_login": "graphite-app",
+          "review_state": "COMMENTED",
+          "submitted_at": "2026-03-24T14:04:25Z"
+        },
+        {
+          "reviewer_login": "adamleithp",
+          "review_state": "APPROVED",
+          "submitted_at": "2026-03-25T11:10:47Z"
+        }
+      ]
+    },
+    {
+      "number": 52268,
+      "title": "fix: update query performance doc",
+      "url": "https://github.com/PostHog/posthog/pull/52268",
+      "author_login": "andyzzhao",
+      "author_avatar": "https://avatars.githubusercontent.com/u/34008309?u=8eb88ef53516ca25323feda4edddcda04d01db26&v=4",
+      "created_at": "2026-03-25T14:33:58Z",
+      "merged_at": "2026-03-25T16:05:53Z",
+      "merged": true,
+      "changed_files_count": 1,
+      "top_level_areas": [],
+      "reviews": [
+        {
+          "reviewer_login": "github-actions",
+          "review_state": "APPROVED",
+          "submitted_at": "2026-03-25T14:35:35Z"
+        }
+      ]
+    },
+    {
+      "number": 52160,
+      "title": "feat(data-warehouse): add pagination to ExternalDataJob list in admin",
+      "url": "https://github.com/PostHog/posthog/pull/52160",
+      "author_login": "Gilbert09",
+      "author_avatar": "https://avatars.githubusercontent.com/u/1459269?u=0edde3eeb61b9d9c80cf8e432bae838fee58f179&v=4",
+      "created_at": "2026-03-24T18:25:47Z",
+      "merged_at": "2026-03-25T15:46:55Z",
+      "merged": true,
+      "changed_files_count": 2,
+      "top_level_areas": [
+        "posthog"
+      ],
+      "reviews": [
+        {
+          "reviewer_login": "greptile-apps",
+          "review_state": "COMMENTED",
+          "submitted_at": "2026-03-24T18:28:11Z"
+        },
+        {
+          "reviewer_login": "copilot-pull-request-reviewer",
+          "review_state": "COMMENTED",
+          "submitted_at": "2026-03-24T18:29:23Z"
+        },
+        {
+          "reviewer_login": "MarconLP",
+          "review_state": "APPROVED",
+          "submitted_at": "2026-03-25T14:02:50Z"
+        }
+      ]
+    },
+    {
+      "number": 52275,
+      "title": "fix: Release hash retrieval",
+      "url": "https://github.com/PostHog/posthog/pull/52275",
+      "author_login": "vdekrijger",
+      "author_avatar": "https://avatars.githubusercontent.com/u/66254686?u=329573662258ef248b49144c9add8049ea63121c&v=4",
+      "created_at": "2026-03-25T15:21:29Z",
+      "merged_at": "2026-03-25T15:43:55Z",
+      "merged": true,
+      "changed_files_count": 1,
+      "top_level_areas": [],
+      "reviews": [
+        {
+          "reviewer_login": "github-actions",
+          "review_state": "APPROVED",
+          "submitted_at": "2026-03-25T15:24:11Z"
+        }
+      ]
+    },
+    {
+      "number": 52081,
+      "title": "feat(logs): add distributed tables for all logs tables",
+      "url": "https://github.com/PostHog/posthog/pull/52081",
+      "author_login": "frankh",
+      "author_avatar": "https://avatars.githubusercontent.com/u/2088870?u=a8cf08c60f9bae657d6c390276a3cf9de57c8a04&v=4",
+      "created_at": "2026-03-24T13:51:24Z",
+      "merged_at": "2026-03-25T15:35:06Z",
+      "merged": true,
+      "changed_files_count": 17,
+      "top_level_areas": [],
+      "reviews": [
+        {
+          "reviewer_login": "greptile-apps",
+          "review_state": "COMMENTED",
+          "submitted_at": "2026-03-25T10:14:13Z"
+        },
+        {
+          "reviewer_login": "Gilbert09",
+          "review_state": "APPROVED",
+          "submitted_at": "2026-03-25T10:34:04Z"
+        },
+        {
+          "reviewer_login": "matt-metivier",
+          "review_state": "APPROVED",
+          "submitted_at": "2026-03-25T15:30:51Z"
+        }
+      ]
+    },
+    {
+      "number": 52271,
+      "title": "feat: Improve success / failure counting in the SLO dashboard",
+      "url": "https://github.com/PostHog/posthog/pull/52271",
+      "author_login": "vdekrijger",
+      "author_avatar": "https://avatars.githubusercontent.com/u/66254686?u=329573662258ef248b49144c9add8049ea63121c&v=4",
+      "created_at": "2026-03-25T14:58:09Z",
+      "merged_at": "2026-03-25T15:06:49Z",
+      "merged": true,
+      "changed_files_count": 1,
+      "top_level_areas": [],
+      "reviews": [
+        {
+          "reviewer_login": "greptile-apps",
+          "review_state": "COMMENTED",
+          "submitted_at": "2026-03-25T15:04:19Z"
+        },
+        {
+          "reviewer_login": "vdekrijger",
+          "review_state": "COMMENTED",
+          "submitted_at": "2026-03-25T15:05:16Z"
+        },
+        {
+          "reviewer_login": "MattPua",
+          "review_state": "APPROVED",
+          "submitted_at": "2026-03-25T15:06:19Z"
+        }
+      ]
+    },
+    {
+      "number": 52143,
+      "title": "chore(batch-exports): Clean up old feature flags",
+      "url": "https://github.com/PostHog/posthog/pull/52143",
+      "author_login": "rossgray",
+      "author_avatar": "https://avatars.githubusercontent.com/u/5103732?u=39524cc2a36358b4b7b07b3ec631169a519855b7&v=4",
+      "created_at": "2026-03-24T17:09:29Z",
+      "merged_at": "2026-03-25T15:01:17Z",
+      "merged": true,
+      "changed_files_count": 7,
+      "top_level_areas": [],
+      "reviews": [
+        {
+          "reviewer_login": "greptile-apps",
+          "review_state": "COMMENTED",
+          "submitted_at": "2026-03-24T17:11:35Z"
+        },
+        {
+          "reviewer_login": "rossgray",
+          "review_state": "COMMENTED",
+          "submitted_at": "2026-03-24T17:35:38Z"
+        },
+        {
+          "reviewer_login": "tomasfarias",
+          "review_state": "APPROVED",
+          "submitted_at": "2026-03-25T10:34:46Z"
+        }
+      ]
+    },
+    {
+      "number": 52153,
+      "title": "chore(data-warehouse): Convert hard coded list of source keys",
+      "url": "https://github.com/PostHog/posthog/pull/52153",
+      "author_login": "Gilbert09",
+      "author_avatar": "https://avatars.githubusercontent.com/u/1459269?u=0edde3eeb61b9d9c80cf8e432bae838fee58f179&v=4",
+      "created_at": "2026-03-24T17:51:19Z",
+      "merged_at": "2026-03-25T14:39:03Z",
+      "merged": true,
+      "changed_files_count": 7,
+      "top_level_areas": [
+        "posthog",
+        "products"
+      ],
+      "reviews": [
+        {
+          "reviewer_login": "greptile-apps",
+          "review_state": "COMMENTED",
+          "submitted_at": "2026-03-24T17:57:00Z"
+        },
+        {
+          "reviewer_login": "copilot-pull-request-reviewer",
+          "review_state": "COMMENTED",
+          "submitted_at": "2026-03-24T17:58:00Z"
+        },
+        {
+          "reviewer_login": "MarconLP",
+          "review_state": "COMMENTED",
+          "submitted_at": "2026-03-25T08:30:48Z"
+        },
+        {
+          "reviewer_login": "Gilbert09",
+          "review_state": "COMMENTED",
+          "submitted_at": "2026-03-25T13:28:00Z"
+        },
+        {
+          "reviewer_login": "Gilbert09",
+          "review_state": "COMMENTED",
+          "submitted_at": "2026-03-25T13:37:48Z"
+        },
+        {
+          "reviewer_login": "MarconLP",
+          "review_state": "APPROVED",
+          "submitted_at": "2026-03-25T13:39:53Z"
+        },
+        {
+          "reviewer_login": "graphite-app",
+          "review_state": "COMMENTED",
+          "submitted_at": "2026-03-25T13:41:29Z"
+        }
+      ]
+    },
+    {
+      "number": 52250,
+      "title": "feat(logs): track user actions for logs alerts and views",
+      "url": "https://github.com/PostHog/posthog/pull/52250",
+      "author_login": "jonmcwest",
+      "author_avatar": "https://avatars.githubusercontent.com/u/66999846?u=0d5625b618474f16160c5eab48b86e26fb7ac64d&v=4",
+      "created_at": "2026-03-25T12:54:19Z",
+      "merged_at": "2026-03-25T14:37:29Z",
+      "merged": true,
+      "changed_files_count": 9,
+      "top_level_areas": [],
+      "reviews": [
+        {
+          "reviewer_login": "copilot-pull-request-reviewer",
+          "review_state": "COMMENTED",
+          "submitted_at": "2026-03-25T13:04:58Z"
+        },
+        {
+          "reviewer_login": "frankh",
+          "review_state": "APPROVED",
+          "submitted_at": "2026-03-25T14:34:38Z"
+        }
+      ]
+    },
+    {
+      "number": 52256,
+      "title": "fix(workflows): Remove SES Send/Delivery webhook metrics to prevent triple counting email_sent",
+      "url": "https://github.com/PostHog/posthog/pull/52256",
+      "author_login": "dmarchuk",
+      "author_avatar": "https://avatars.githubusercontent.com/u/8395106?u=ce6952d5848fe3944e00f53998a2583dd5de4d82&v=4",
+      "created_at": "2026-03-25T13:50:18Z",
+      "merged_at": "2026-03-25T14:33:18Z",
+      "merged": true,
+      "changed_files_count": 3,
+      "top_level_areas": [],
+      "reviews": [
+        {
+          "reviewer_login": "greptile-apps",
+          "review_state": "COMMENTED",
+          "submitted_at": "2026-03-25T14:10:19Z"
+        },
+        {
+          "reviewer_login": "havenbarnes",
+          "review_state": "APPROVED",
+          "submitted_at": "2026-03-25T14:32:24Z"
+        }
+      ]
+    },
+    {
+      "number": 52213,
+      "title": "refactor(ActionFilterRow): extract ActionFilterRowMenu",
+      "url": "https://github.com/PostHog/posthog/pull/52213",
+      "author_login": "sampennington",
+      "author_avatar": "https://avatars.githubusercontent.com/u/56024559?u=77c01534756596a4e0b5a791d8fc847a5e829280&v=4",
+      "created_at": "2026-03-25T06:16:35Z",
+      "merged_at": "2026-03-25T14:26:14Z",
+      "merged": true,
+      "changed_files_count": 2,
+      "top_level_areas": [],
+      "reviews": [
+        {
+          "reviewer_login": "greptile-apps",
+          "review_state": "COMMENTED",
+          "submitted_at": "2026-03-25T12:31:12Z"
+        },
+        {
+          "reviewer_login": "sampennington",
+          "review_state": "COMMENTED",
+          "submitted_at": "2026-03-25T12:39:22Z"
+        },
+        {
+          "reviewer_login": "thmsobrmlr",
+          "review_state": "APPROVED",
+          "submitted_at": "2026-03-25T14:23:16Z"
+        }
+      ]
+    }
+  ]
+}

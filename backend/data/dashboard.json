@@ -1,0 +1,346 @@
+{
+  "summary": {
+    "repo": "PostHog/posthog",
+    "windowDays": 90,
+    "generatedAt": "2026-03-25T18:22:19.555049+00:00",
+    "prsAnalyzed": 25,
+    "engineersAnalyzed": 20,
+    "mergedPrRate": 0.94,
+    "medianTimeToMergeHours": 8.16,
+    "impactDefinition": "Impact combines shipping volume, substantial merged work, and review support over the last 90 days."
+  },
+  "topEngineers": [
+    {
+      "login": "Gilbert09",
+      "displayName": "Gilbert09",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/1459269?u=0edde3eeb61b9d9c80cf8e432bae838fee58f179&v=4",
+      "rank": 1,
+      "impactScore": 100.0,
+      "headline": "Consistently lands substantial PRs; works across multiple product areas.",
+      "stats": {
+        "mergedPrs": 3,
+        "meaningfulPrs": 2,
+        "reviewsGiven": 1,
+        "uniqueAreasTouched": 3,
+        "uniqueAuthorsReviewed": 1,
+        "medianTimeToMergeHours": 21.35
+      }
+    },
+    {
+      "login": "cat-ph",
+      "displayName": "cat-ph",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/268578347?v=4",
+      "rank": 2,
+      "impactScore": 42.5,
+      "headline": "Consistently lands substantial PRs.",
+      "stats": {
+        "mergedPrs": 1,
+        "meaningfulPrs": 1,
+        "reviewsGiven": 1,
+        "uniqueAreasTouched": 1,
+        "uniqueAuthorsReviewed": 1,
+        "medianTimeToMergeHours": 5.69
+      }
+    },
+    {
+      "login": "dmarticus",
+      "displayName": "dmarticus",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/4853149?u=7e84d1ca5c76d7f72f52c8d51e24cb493f5dd528&v=4",
+      "rank": 3,
+      "impactScore": 42.5,
+      "headline": "Consistently lands substantial PRs.",
+      "stats": {
+        "mergedPrs": 1,
+        "meaningfulPrs": 1,
+        "reviewsGiven": 1,
+        "uniqueAreasTouched": 1,
+        "uniqueAuthorsReviewed": 1,
+        "medianTimeToMergeHours": 41.95
+      }
+    },
+    {
+      "login": "nickbest-ph",
+      "displayName": "nickbest-ph",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/206742387?u=0fee4599f3dce4aa25abb445922f613e303475a5&v=4",
+      "rank": 4,
+      "impactScore": 42.5,
+      "headline": "Consistently lands substantial PRs.",
+      "stats": {
+        "mergedPrs": 1,
+        "meaningfulPrs": 1,
+        "reviewsGiven": 1,
+        "uniqueAreasTouched": 2,
+        "uniqueAuthorsReviewed": 1,
+        "medianTimeToMergeHours": 162.65
+      }
+    },
+    {
+      "login": "MattPua",
+      "displayName": "MattPua",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/3376526?u=450323d42789dc0b81ed0ed29882af26d184bb86&v=4",
+      "rank": 5,
+      "impactScore": 42.5,
+      "headline": "Consistently lands substantial PRs.",
+      "stats": {
+        "mergedPrs": 1,
+        "meaningfulPrs": 1,
+        "reviewsGiven": 1,
+        "uniqueAreasTouched": 1,
+        "uniqueAuthorsReviewed": 1,
+        "medianTimeToMergeHours": 46.75
+      }
+    }
+  ],
+  "engineerDetails": {
+    "Gilbert09": {
+      "login": "Gilbert09",
+      "displayName": "Gilbert09",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/1459269?u=0edde3eeb61b9d9c80cf8e432bae838fee58f179&v=4",
+      "rank": 1,
+      "impactScore": 100.0,
+      "headline": "Consistently lands substantial PRs; works across multiple product areas.",
+      "whyThisPersonRanksHighly": [
+        "Delivered 2 meaningful merged PRs, which is the highest-weighted part of the score.",
+        "Provided 1 high-signal reviews, indicating visible support for other engineers' work.",
+        "Touched 3 distinct top-level areas, suggesting broad context across the codebase."
+      ],
+      "scoreBreakdown": {
+        "mergedPrsScore": 100.0,
+        "meaningfulPrsScore": 100.0,
+        "reviewsGivenScore": 100.0
+      },
+      "stats": {
+        "mergedPrs": 3,
+        "meaningfulPrs": 2,
+        "reviewsGiven": 1,
+        "uniqueAreasTouched": 3,
+        "uniqueAuthorsReviewed": 1,
+        "medianTimeToMergeHours": 21.35
+      },
+      "representativePrs": [
+        {
+          "number": 52168,
+          "title": "feat(data-warehouse): Allow deletion of webhooks",
+          "url": "https://github.com/PostHog/posthog/pull/52168",
+          "mergedAt": "2026-03-25T16:33:44Z",
+          "changedFiles": 11,
+          "areas": [
+            "frontend",
+            "posthog",
+            "products"
+          ],
+          "reviewCount": 8,
+          "isMeaningful": true,
+          "whyItMatters": "Touched 3 top-level areas, which makes it a strong example of cross-system delivery."
+        },
+        {
+          "number": 52153,
+          "title": "chore(data-warehouse): Convert hard coded list of source keys",
+          "url": "https://github.com/PostHog/posthog/pull/52153",
+          "mergedAt": "2026-03-25T14:39:03Z",
+          "changedFiles": 7,
+          "areas": [
+            "posthog",
+            "products"
+          ],
+          "reviewCount": 7,
+          "isMeaningful": true,
+          "whyItMatters": "Touched 2 top-level areas, which makes it a strong example of cross-system delivery."
+        },
+        {
+          "number": 52160,
+          "title": "feat(data-warehouse): add pagination to ExternalDataJob list in admin",
+          "url": "https://github.com/PostHog/posthog/pull/52160",
+          "mergedAt": "2026-03-25T15:46:55Z",
+          "changedFiles": 2,
+          "areas": [
+            "posthog"
+          ],
+          "reviewCount": 3,
+          "isMeaningful": false,
+          "whyItMatters": "Drew 3 reviews, showing it was substantive enough to need broader engineering input."
+        }
+      ]
+    },
+    "cat-ph": {
+      "login": "cat-ph",
+      "displayName": "cat-ph",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/268578347?v=4",
+      "rank": 2,
+      "impactScore": 42.5,
+      "headline": "Consistently lands substantial PRs.",
+      "whyThisPersonRanksHighly": [
+        "Delivered 1 meaningful merged PRs, which is the highest-weighted part of the score.",
+        "Provided 1 high-signal reviews, indicating visible support for other engineers' work.",
+        "Touched 1 distinct top-level areas, suggesting broad context across the codebase."
+      ],
+      "scoreBreakdown": {
+        "mergedPrsScore": 0.0,
+        "meaningfulPrsScore": 50.0,
+        "reviewsGivenScore": 100.0
+      },
+      "stats": {
+        "mergedPrs": 1,
+        "meaningfulPrs": 1,
+        "reviewsGiven": 1,
+        "uniqueAreasTouched": 1,
+        "uniqueAuthorsReviewed": 1,
+        "medianTimeToMergeHours": 5.69
+      },
+      "representativePrs": [
+        {
+          "number": 52239,
+          "title": "feat(cymbal): add php frame support",
+          "url": "https://github.com/PostHog/posthog/pull/52239",
+          "mergedAt": "2026-03-25T17:42:20Z",
+          "changedFiles": 5,
+          "areas": [
+            "rust"
+          ],
+          "reviewCount": 4,
+          "isMeaningful": true,
+          "whyItMatters": "Drew 4 reviews, showing it was substantive enough to need broader engineering input."
+        }
+      ]
+    },
+    "dmarticus": {
+      "login": "dmarticus",
+      "displayName": "dmarticus",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/4853149?u=7e84d1ca5c76d7f72f52c8d51e24cb493f5dd528&v=4",
+      "rank": 3,
+      "impactScore": 42.5,
+      "headline": "Consistently lands substantial PRs.",
+      "whyThisPersonRanksHighly": [
+        "Delivered 1 meaningful merged PRs, which is the highest-weighted part of the score.",
+        "Provided 1 high-signal reviews, indicating visible support for other engineers' work.",
+        "Touched 1 distinct top-level areas, suggesting broad context across the codebase."
+      ],
+      "scoreBreakdown": {
+        "mergedPrsScore": 0.0,
+        "meaningfulPrsScore": 50.0,
+        "reviewsGivenScore": 100.0
+      },
+      "stats": {
+        "mergedPrs": 1,
+        "meaningfulPrs": 1,
+        "reviewsGiven": 1,
+        "uniqueAreasTouched": 1,
+        "uniqueAuthorsReviewed": 1,
+        "medianTimeToMergeHours": 41.95
+      },
+      "representativePrs": [
+        {
+          "number": 52025,
+          "title": "fix(cohorts):  self-heal stuck static cohorts and fix OOM in CH\u2192PG sync",
+          "url": "https://github.com/PostHog/posthog/pull/52025",
+          "mergedAt": "2026-03-25T17:41:16Z",
+          "changedFiles": 6,
+          "areas": [
+            "posthog"
+          ],
+          "reviewCount": 5,
+          "isMeaningful": true,
+          "whyItMatters": "Drew 5 reviews, showing it was substantive enough to need broader engineering input."
+        }
+      ]
+    },
+    "nickbest-ph": {
+      "login": "nickbest-ph",
+      "displayName": "nickbest-ph",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/206742387?u=0fee4599f3dce4aa25abb445922f613e303475a5&v=4",
+      "rank": 4,
+      "impactScore": 42.5,
+      "headline": "Consistently lands substantial PRs.",
+      "whyThisPersonRanksHighly": [
+        "Delivered 1 meaningful merged PRs, which is the highest-weighted part of the score.",
+        "Provided 1 high-signal reviews, indicating visible support for other engineers' work.",
+        "Touched 2 distinct top-level areas, suggesting broad context across the codebase."
+      ],
+      "scoreBreakdown": {
+        "mergedPrsScore": 0.0,
+        "meaningfulPrsScore": 50.0,
+        "reviewsGivenScore": 100.0
+      },
+      "stats": {
+        "mergedPrs": 1,
+        "meaningfulPrs": 1,
+        "reviewsGiven": 1,
+        "uniqueAreasTouched": 2,
+        "uniqueAuthorsReviewed": 1,
+        "medianTimeToMergeHours": 162.65
+      },
+      "representativePrs": [
+        {
+          "number": 51549,
+          "title": "feat(django): personhog client migration for person reads",
+          "url": "https://github.com/PostHog/posthog/pull/51549",
+          "mergedAt": "2026-03-25T17:39:57Z",
+          "changedFiles": 31,
+          "areas": [
+            "posthog",
+            "products"
+          ],
+          "reviewCount": 19,
+          "isMeaningful": true,
+          "whyItMatters": "Touched 2 top-level areas, which makes it a strong example of cross-system delivery."
+        }
+      ]
+    },
+    "MattPua": {
+      "login": "MattPua",
+      "displayName": "MattPua",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/3376526?u=450323d42789dc0b81ed0ed29882af26d184bb86&v=4",
+      "rank": 5,
+      "impactScore": 42.5,
+      "headline": "Consistently lands substantial PRs.",
+      "whyThisPersonRanksHighly": [
+        "Delivered 1 meaningful merged PRs, which is the highest-weighted part of the score.",
+        "Provided 1 high-signal reviews, indicating visible support for other engineers' work.",
+        "Touched 1 distinct top-level areas, suggesting broad context across the codebase."
+      ],
+      "scoreBreakdown": {
+        "mergedPrsScore": 0.0,
+        "meaningfulPrsScore": 50.0,
+        "reviewsGivenScore": 100.0
+      },
+      "stats": {
+        "mergedPrs": 1,
+        "meaningfulPrs": 1,
+        "reviewsGiven": 1,
+        "uniqueAreasTouched": 1,
+        "uniqueAuthorsReviewed": 1,
+        "medianTimeToMergeHours": 46.75
+      },
+      "representativePrs": [
+        {
+          "number": 51982,
+          "title": "feat(insight): Allow toggling other labels for trends insights with context menu",
+          "url": "https://github.com/PostHog/posthog/pull/51982",
+          "mergedAt": "2026-03-25T16:29:00Z",
+          "changedFiles": 5,
+          "areas": [
+            "frontend"
+          ],
+          "reviewCount": 6,
+          "isMeaningful": true,
+          "whyItMatters": "Drew 6 reviews, showing it was substantive enough to need broader engineering input."
+        }
+      ]
+    }
+  },
+  "methodology": {
+    "definition": "Impact combines shipping volume, substantial merged work, and review support over the last 90 days.",
+    "weights": {
+      "mergedPrs": 0.35,
+      "meaningfulPrs": 0.45,
+      "reviewsGiven": 0.2
+    },
+    "meaningfulPrDefinition": "A merged PR is meaningful when it hits at least 2 of 3 depth signals: 5+ changed files, 2+ top-level areas, or 2+ reviews.",
+    "notes": [
+      "Scores use min-max normalization across engineers for merged PRs, meaningful merged PRs, and reviews given.",
+      "Raw stats are shown directly for explainability and are not normalized in the UI.",
+      "Merge rate is based on pull requests closed in the last 90 days, with merged pull requests as the numerator.",
+      "Review counts include APPROVED and CHANGES_REQUESTED states and exclude self-reviews."
+    ]
+  }
+}

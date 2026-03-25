@@ -25,8 +25,8 @@ class Settings:
 
 def load_settings() -> Settings:
     token = os.environ.get("GITHUB_TOKEN", "").strip()
-    owner = os.environ.get("GITHUB_OWNER", "").strip()
-    repo = os.environ.get("GITHUB_REPO", "").strip()
+    owner = os.environ.get("GITHUB_OWNER", "PostHog").strip()
+    repo = os.environ.get("GITHUB_REPO", "posthog").strip()
     return Settings(
         github_token=token,
         github_owner=owner,
