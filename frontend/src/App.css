@@ -1,0 +1,434 @@
+:root {
+  --bg: #f5f5f7;
+  --card-bg: #ffffff;
+  --text-primary: #1d1d1f;
+  --text-secondary: #6e6e73;
+  --text-tertiary: #aeaeb2;
+  --border: #e8e8ed;
+  --accent: #6366f1;
+  --accent-light: #eef2ff;
+  --gold: #ca8a04;
+  --gold-bg: #fef9c3;
+  --silver: #64748b;
+  --silver-bg: #f1f5f9;
+  --bronze: #b45309;
+  --bronze-bg: #fef3c7;
+  --radius: 14px;
+  --radius-sm: 8px;
+  --shadow: 0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.06);
+  --shadow-hover: 0 4px 16px rgba(0, 0, 0, 0.08);
+  --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Layout shell ────────────────────────────────── */
+
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  max-height: 100vh;
+  padding: 16px 20px;
+  gap: 12px;
+}
+
+/* ── Summary header ──────────────────────────────── */
+
+.summary-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  flex-shrink: 0;
+}
+
+.summary-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.repo-name {
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.header-badge {
+  font-size: 12px;
+  color: var(--text-secondary);
+  background: var(--bg);
+  padding: 4px 10px;
+  border-radius: 100px;
+  white-space: nowrap;
+}
+
+.summary-kpis {
+  display: flex;
+  gap: 24px;
+}
+
+.kpi {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1px;
+}
+
+.kpi-value {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: -0.01em;
+}
+
+.kpi-label {
+  font-size: 10px;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* ── Engineer grid ───────────────────────────────── */
+
+.engineer-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+  flex: 1;
+  min-height: 0;
+}
+
+/* ── Engineer card ───────────────────────────────── */
+
+.engineer-card {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow: hidden;
+  border-top: 3px solid var(--border);
+  transition: box-shadow 0.2s ease;
+  animation: fadeInUp 0.35s ease-out both;
+}
+
+.engineer-card:hover {
+  box-shadow: var(--shadow-hover);
+}
+
+.engineer-card:nth-child(1) { animation-delay: 0.04s; }
+.engineer-card:nth-child(2) { animation-delay: 0.08s; }
+.engineer-card:nth-child(3) { animation-delay: 0.12s; }
+.engineer-card:nth-child(4) { animation-delay: 0.16s; }
+.engineer-card:nth-child(5) { animation-delay: 0.20s; }
+
+.engineer-card[data-rank="1"] { border-top-color: var(--gold); }
+.engineer-card[data-rank="2"] { border-top-color: var(--silver); }
+.engineer-card[data-rank="3"] { border-top-color: var(--bronze); }
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ── Card identity row ───────────────────────────── */
+
+.card-identity {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.rank-badge {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+  color: white;
+  flex-shrink: 0;
+  background: var(--text-tertiary);
+}
+
+.rank-badge[data-rank="1"] { background: var(--gold); }
+.rank-badge[data-rank="2"] { background: var(--silver); }
+.rank-badge[data-rank="3"] { background: var(--bronze); }
+
+.avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+
+.card-name-score {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  gap: 0;
+}
+
+.engineer-name {
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.2;
+}
+
+.impact-score {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--accent);
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+}
+
+/* ── Headline ────────────────────────────────────── */
+
+.headline {
+  font-size: 11.5px;
+  color: var(--text-secondary);
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ── Stats ───────────────────────────────────────── */
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4px;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px 2px;
+  background: var(--bg);
+  border-radius: var(--radius-sm);
+  gap: 1px;
+}
+
+.stat-value {
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.stat-label {
+  font-size: 8.5px;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.stats-supporting {
+  font-size: 10.5px;
+  color: var(--text-tertiary);
+  text-align: center;
+  line-height: 1.3;
+}
+
+/* ── Score breakdown (Recharts) ──────────────────── */
+
+.score-breakdown {
+  flex-shrink: 0;
+}
+
+.section-label {
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--text-tertiary);
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+/* ── Representative PRs ──────────────────────────── */
+
+.representative-prs {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+}
+
+.representative-prs::-webkit-scrollbar {
+  width: 3px;
+}
+
+.representative-prs::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 3px;
+}
+
+.pr-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.pr-title-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.pr-link {
+  font-size: 11px;
+  color: var(--accent);
+  text-decoration: none;
+  line-height: 1.35;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  word-break: break-word;
+}
+
+.pr-link:hover {
+  text-decoration: underline;
+}
+
+.meaningful-badge {
+  font-size: 7.5px;
+  background: var(--accent-light);
+  color: var(--accent);
+  padding: 1px 5px;
+  border-radius: 100px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin-top: 2px;
+}
+
+.pr-meta {
+  font-size: 10px;
+  color: var(--text-tertiary);
+  line-height: 1.3;
+}
+
+/* ── Methodology footer ──────────────────────────── */
+
+.methodology-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px 20px;
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  flex-shrink: 0;
+  flex-wrap: wrap;
+}
+
+.methodology-text {
+  font-size: 11px;
+  color: var(--text-secondary);
+}
+
+.methodology-weights {
+  display: flex;
+  gap: 14px;
+}
+
+.weight-pill {
+  font-size: 11px;
+  color: var(--text-secondary);
+  background: var(--bg);
+  padding: 3px 10px;
+  border-radius: 100px;
+}
+
+.weight-value {
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+/* ── Loading / error states ──────────────────────── */
+
+.state-screen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-size: 15px;
+  color: var(--text-secondary);
+}
+
+.state-screen.error {
+  color: #dc2626;
+}
+
+/* ── Responsive ──────────────────────────────────── */
+
+@media (max-width: 1200px) {
+  .engineer-grid {
+    grid-template-columns: repeat(3, 1fr);
+    overflow-y: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .engineer-grid {
+    grid-template-columns: repeat(2, 1fr);
+    overflow-y: auto;
+  }
+
+  .summary-header {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
