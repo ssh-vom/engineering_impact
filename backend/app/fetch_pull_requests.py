@@ -22,11 +22,20 @@ def main() -> None:
 
     pull_requests: list[dict[str, object]] = []
     cutoff = datetime.now(UTC) - timedelta(days=90)
+    merged_since = cutoff.date().isoformat()
+    processed = 0
+
+    print(f"fetching merged pull requests since {merged_since}")
 
     with GitHubClient(token=settings.github_token) as client:
-        for pull_request in client.iter_pull_requests(
-            settings.github_owner, settings.github_repo
+        for search_result in client.iter_merged_pull_requests_since(
+            settings.github_owner, settings.github_repo, merged_since
         ):
+            processed += 1
+            number = search_result["number"]
+            pull_request = client.get_pull_request(
+                settings.github_owner, settings.github_repo, number
+            )
             merged_at = pull_request["merged_at"]
             if not merged_at:
                 continue
@@ -35,7 +44,6 @@ def main() -> None:
             if merged_at_dt < cutoff:
                 continue
 
-            number = pull_request["number"]
             files = client.get_pull_request_files(
                 settings.github_owner, settings.github_repo, number
             )
@@ -72,6 +80,9 @@ def main() -> None:
                     ],
                 }
             )
+
+            if processed % 25 == 0:
+                print(f"processed {processed} pull requests")
 
     output_path = BACKEND_ROOT / "data" / "pull_requests.json"
     output_path.parent.mkdir(parents=True, exist_ok=True)

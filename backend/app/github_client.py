@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import os
+from datetime import date, timedelta
 from pathlib import Path
 from typing import Any, Iterator
 
@@ -67,6 +68,76 @@ class GitHubClient:
             path, params={"state": state, "sort": "updated", "direction": "desc"}
         ):
             yield item
+
+    def iter_merged_pull_requests_since(
+        self, owner: str, repo: str, merged_since: str
+    ) -> Iterator[dict[str, Any]]:
+        path = "/search/issues"
+        start = date.fromisoformat(merged_since)
+        end = date.today()
+        window = timedelta(days=30)
+
+        def iter_range(range_start: date, range_end: date) -> Iterator[dict[str, Any]]:
+            query = (
+                f"repo:{owner}/{repo} is:pr is:merged "
+                f"merged:{range_start.isoformat()}..{range_end.isoformat()}"
+            )
+            payload = self.get_json(
+                path,
+                params={
+                    "q": query,
+                    "sort": "updated",
+                    "order": "desc",
+                    "page": 1,
+                    "per_page": 100,
+                },
+            )
+            total_count = payload["total_count"]
+            if total_count > 1000:
+                assert range_start < range_end, (
+                    "search range still exceeds 1000 results"
+                )
+                midpoint = range_start + (range_end - range_start) // 2
+                yield from iter_range(midpoint + timedelta(days=1), range_end)
+                yield from iter_range(range_start, midpoint)
+                return
+
+            items = payload["items"]
+            for item in items:
+                yield item
+            if len(items) < 100:
+                return
+
+            page = 2
+            while True:
+                payload = self.get_json(
+                    path,
+                    params={
+                        "q": query,
+                        "sort": "updated",
+                        "order": "desc",
+                        "page": page,
+                        "per_page": 100,
+                    },
+                )
+                items = payload["items"]
+                if not items:
+                    break
+                for item in items:
+                    yield item
+                if len(items) < 100:
+                    break
+                page += 1
+
+        current_end = end
+        while current_end >= start:
+            current_start = max(start, current_end - window + timedelta(days=1))
+            yield from iter_range(current_start, current_end)
+            current_end = current_start - timedelta(days=1)
+
+    def get_pull_request(self, owner: str, repo: str, number: int) -> dict[str, Any]:
+        path = f"/repos/{owner}/{repo}/pulls/{number}"
+        return self.get_json(path)
 
     def get_pull_request_files(
         self, owner: str, repo: str, number: int
