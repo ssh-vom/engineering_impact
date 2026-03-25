@@ -12,9 +12,33 @@ function fmtHours(h: number | null): string {
   return `${h.toFixed(1)}h`
 }
 
-export function EngineerCard({ detail }: { detail: EngineerDetail }) {
+export function EngineerCard({
+  detail,
+  selected,
+  onClick,
+}: {
+  detail: EngineerDetail
+  selected?: boolean
+  onClick?: () => void
+}) {
   return (
-    <article className="engineer-card" data-rank={detail.rank}>
+    <article
+      className={`engineer-card${selected ? " engineer-card--selected" : ""}`}
+      data-rank={detail.rank}
+      onClick={onClick}
+      role={onClick ? "button" : undefined}
+      tabIndex={onClick ? 0 : undefined}
+      onKeyDown={
+        onClick
+          ? (e) => {
+              if (e.key === "Enter" || e.key === " ") {
+                e.preventDefault()
+                onClick()
+              }
+            }
+          : undefined
+      }
+    >
       <div className="card-identity">
         <span className="rank-num">{detail.rank}</span>
         <img
@@ -77,6 +101,7 @@ export function EngineerCard({ detail }: { detail: EngineerDetail }) {
                 href={pr.url}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={(e) => e.stopPropagation()}
               >
                 #{pr.number} {pr.title}
               </a>
