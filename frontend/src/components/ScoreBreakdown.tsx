@@ -16,8 +16,8 @@ export function ScoreBreakdown({ breakdown }: { breakdown: BreakdownType }) {
 
   return (
     <div className="profile-chart">
-      <ResponsiveContainer width="100%" height={110}>
-        <RadarChart data={data} outerRadius="62%">
+      <ResponsiveContainer width="100%" height={96}>
+        <RadarChart data={data} outerRadius="58%">
           <PolarGrid stroke="#302d2a" />
           <PolarAngleAxis
             dataKey="axis"

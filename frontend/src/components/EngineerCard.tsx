@@ -1,19 +1,18 @@
 import type { EngineerDetail } from "../types"
+import { AreaPills } from "./AreaPills"
 import { ScoreBreakdown } from "./ScoreBreakdown"
 
 function formatScore(n: number): string {
   return n % 1 === 0 ? n.toFixed(0) : n.toFixed(1)
 }
 
-function formatHours(h: number | null): string {
+function fmtHours(h: number | null): string {
   if (h === null) return "—"
   if (h < 1) return `${(h * 60).toFixed(0)}m`
   return `${h.toFixed(1)}h`
 }
 
 export function EngineerCard({ detail }: { detail: EngineerDetail }) {
-  const reasons = detail.whyThisPersonRanksHighly.slice(0, 2)
-
   return (
     <article className="engineer-card" data-rank={detail.rank}>
       <div className="card-identity">
@@ -47,25 +46,30 @@ export function EngineerCard({ detail }: { detail: EngineerDetail }) {
           <span className="stat-val">{detail.stats.reviewsGiven}</span>
           <span className="stat-lbl">reviews</span>
         </div>
+        <div className="stat">
+          <span className="stat-val">
+            {fmtHours(detail.stats.medianTimeToMergeHours)}
+          </span>
+          <span className="stat-lbl">TTM</span>
+        </div>
       </div>
 
-      <span className="stats-extra">
+      <span className="stats-line">
         {detail.stats.uniqueAreasTouched} areas ·{" "}
-        {detail.stats.uniqueAuthorsReviewed} authors reviewed ·{" "}
-        {formatHours(detail.stats.medianTimeToMergeHours)} merge time
+        {detail.stats.uniqueAuthorsReviewed} authors reviewed
       </span>
 
-      <div className="reasons">
-        {reasons.map((r, i) => (
-          <p className="reason" key={i}>
+      <ul className="reasons">
+        {detail.whyThisPersonRanksHighly.slice(0, 2).map((r, i) => (
+          <li className="reason" key={i}>
             {r}
-          </p>
+          </li>
         ))}
-      </div>
+      </ul>
 
       <div className="prs">
         {detail.representativePrs.map((pr) => (
-          <div key={pr.number}>
+          <div className="pr-block" key={pr.number}>
             <div className="pr-title-row">
               {pr.isMeaningful && <span className="pr-dot" />}
               <a
@@ -77,10 +81,10 @@ export function EngineerCard({ detail }: { detail: EngineerDetail }) {
                 #{pr.number} {pr.title}
               </a>
             </div>
-            <span className="pr-detail">
-              {pr.changedFiles} files · {pr.reviewCount} reviews ·{" "}
-              {pr.areas.join(", ")}
+            <span className="pr-meta-line">
+              {pr.changedFiles} files · {pr.reviewCount} reviews
             </span>
+            <AreaPills areas={pr.areas} />
           </div>
         ))}
       </div>
