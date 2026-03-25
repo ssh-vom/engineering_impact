@@ -46,12 +46,39 @@ class GitHubClient:
         params: dict[str, Any] | None = None,
         json: Any = None,
     ) -> httpx.Response:
-        return self._client.request(method, path, params=params, json=json)
+        response = self._client.request(method, path, params=params, json=json)
+        response.raise_for_status()
+        return response
 
     def get_json(self, path: str, params: dict[str, Any] | None = None) -> Any:
-        response = self._client.get(path, params=params)
-        response.raise_for_status()
-        return response.json()
+        return self.request("GET", path, params=params).json()
+
+    def get_viewer(self) -> dict[str, Any]:
+        return self.get_json("/user")
+
+    def get_rate_limit(self) -> dict[str, Any]:
+        return self.get_json("/rate_limit")
+
+    def iter_pull_requests(
+        self, owner: str, repo: str, state: str = "closed"
+    ) -> Iterator[dict[str, Any]]:
+        path = f"/repos/{owner}/{repo}/pulls"
+        for item in self.iter_pages(
+            path, params={"state": state, "sort": "updated", "direction": "desc"}
+        ):
+            yield item
+
+    def get_pull_request_files(
+        self, owner: str, repo: str, number: int
+    ) -> list[dict[str, Any]]:
+        path = f"/repos/{owner}/{repo}/pulls/{number}/files"
+        return list(self.iter_pages(path))
+
+    def get_pull_request_reviews(
+        self, owner: str, repo: str, number: int
+    ) -> list[dict[str, Any]]:
+        path = f"/repos/{owner}/{repo}/pulls/{number}/reviews"
+        return list(self.iter_pages(path))
 
     def iter_pages(
         self,
