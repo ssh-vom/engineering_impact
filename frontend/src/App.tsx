@@ -1,5 +1,5 @@
 import { useEffect, useState, useCallback } from "react"
-import type { DashboardData } from "./types"
+import type { DashboardData, EngineerDetail } from "./types"
 import { fetchDashboardData } from "./lib/dashboard"
 import { SummaryHeader } from "./components/SummaryHeader"
 import { EngineerCard } from "./components/EngineerCard"
@@ -10,6 +10,7 @@ export default function App() {
   const [data, setData] = useState<DashboardData | null>(null)
   const [error, setError] = useState<string | null>(null)
   const [focusLogin, setFocusLogin] = useState<string | null>(null)
+  const [lastDetail, setLastDetail] = useState<EngineerDetail | null>(null)
 
   useEffect(() => {
     fetchDashboardData()
@@ -28,6 +29,16 @@ export default function App() {
     return () => window.removeEventListener("keydown", handler)
   }, [focusLogin, closeFocus])
 
+  const focusedDetail =
+    focusLogin && data ? data.engineerDetails[focusLogin] : null
+
+  if (focusedDetail && focusedDetail !== lastDetail) {
+    setLastDetail(focusedDetail)
+  }
+
+  const panelOpen = !!focusedDetail
+  const panelDetail = focusedDetail ?? lastDetail
+
   if (error) {
     return <div className="state-screen error">{error}</div>
   }
@@ -35,12 +46,8 @@ export default function App() {
     return <div className="state-screen">Loading dashboard…</div>
   }
 
-  const focusedDetail = focusLogin
-    ? data.engineerDetails[focusLogin]
-    : undefined
-
   return (
-    <div className={`dashboard${focusedDetail ? " dashboard--focus" : ""}`}>
+    <div className={`dashboard${panelOpen ? " dashboard--focus" : ""}`}>
       <SummaryHeader summary={data.summary} />
 
       <div className="dashboard-body">
@@ -61,8 +68,12 @@ export default function App() {
           })}
         </main>
 
-        {focusedDetail && (
-          <FocusPanel detail={focusedDetail} onClose={closeFocus} />
+        {panelDetail && (
+          <FocusPanel
+            detail={panelDetail}
+            open={panelOpen}
+            onClose={closeFocus}
+          />
         )}
       </div>
 

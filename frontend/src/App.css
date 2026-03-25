@@ -99,7 +99,6 @@ body {
   gap: 8px;
   flex: 1;
   min-height: 0;
-  transition: gap 0.25s ease;
 }
 
 /* ── grid ────────────────────────────────────────── */
@@ -108,12 +107,12 @@ body {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 8px;
-  flex: 1;
+  flex: 1 1 100%;
   min-height: 0;
   min-width: 0;
   align-items: start;
   align-content: start;
-  transition: flex 0.25s ease;
+  transition: flex-basis 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .dashboard--focus .engineer-grid {
@@ -141,7 +140,7 @@ body {
   gap: 5px;
   overflow: hidden;
   cursor: pointer;
-  transition: border-color 0.15s ease, opacity 0.15s ease;
+  transition: border-color 0.2s ease, opacity 0.3s ease;
 }
 
 .engineer-card:hover {
@@ -373,20 +372,33 @@ body {
 /* ── focus panel ─────────────────────────────────── */
 
 .focus-panel {
-  flex: 0 0 58%;
+  flex: 0 0 0%;
+  width: 0;
+  opacity: 0;
+  transform: translateX(16px);
   background: var(--surface);
-  border: 1px solid var(--border);
+  border: 1px solid transparent;
   border-radius: var(--radius);
   position: relative;
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  animation: focusSlideIn 0.2s ease-out;
+  pointer-events: none;
+  transition:
+    flex-basis 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    width 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.25s ease 0.05s,
+    transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 0.3s ease;
 }
 
-@keyframes focusSlideIn {
-  from { opacity: 0; transform: translateX(12px); }
-  to   { opacity: 1; transform: translateX(0); }
+.focus-panel--open {
+  flex: 0 0 58%;
+  width: auto;
+  opacity: 1;
+  transform: translateX(0);
+  border-color: var(--border);
+  pointer-events: auto;
 }
 
 .focus-close {

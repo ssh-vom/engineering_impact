@@ -20,9 +20,11 @@ function fmtHours(h: number | null): string {
 
 export function FocusPanel({
   detail,
+  open,
   onClose,
 }: {
   detail: EngineerDetail
+  open: boolean
   onClose: () => void
 }) {
   const breakdown = detail.scoreBreakdown
@@ -33,13 +35,12 @@ export function FocusPanel({
   ]
 
   return (
-    <aside className="focus-panel">
+    <aside className={`focus-panel${open ? " focus-panel--open" : ""}`}>
       <button className="focus-close" onClick={onClose}>
         <span aria-hidden>&#x2715;</span>
       </button>
 
       <div className="focus-body">
-        {/* ── left: identity + chart + stats ── */}
         <div className="focus-left">
           <div className="focus-identity">
             <span className="focus-rank">#{detail.rank}</span>
@@ -127,12 +128,9 @@ export function FocusPanel({
           </div>
         </div>
 
-        {/* ── right: reasons + PRs ── */}
         <div className="focus-right">
           <div className="focus-reasons">
-            <span className="focus-section-title">
-              Why #{detail.rank}
-            </span>
+            <span className="focus-section-title">Why #{detail.rank}</span>
             <ul className="focus-reason-list">
               {detail.whyThisPersonRanksHighly.map((r, i) => (
                 <li key={i}>{r}</li>
